@@ -1,0 +1,6 @@
+﻿CREATE TABLE [User] (
+  "ID" INT PRIMARY KEY IDENTITY(1,1),
+  "FullName" VARCHAR(255) NOT NULL,
+  "Login" VARCHAR(255) NOT NULL,
+  "Password" VARCHAR(255) NOT NULL
+);
