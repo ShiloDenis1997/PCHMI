@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MinskForYou.Api.App_Start;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -11,9 +12,14 @@ namespace MinskForYou.Api
 {
     public class WebApiApplication : System.Web.HttpApplication
     {
-        protected void Application_Start()
+		private DiConfig _diConfig; 
+
+		protected void Application_Start()
         {
-            AreaRegistration.RegisterAllAreas();
+			_diConfig = new DiConfig();
+			_diConfig.Configure(GlobalConfiguration.Configuration);
+
+			AreaRegistration.RegisterAllAreas();
             GlobalConfiguration.Configure(WebApiConfig.Register);
             FilterConfig.RegisterGlobalFilters(GlobalFilters.Filters);
             RouteConfig.RegisterRoutes(RouteTable.Routes);
@@ -21,5 +27,9 @@ namespace MinskForYou.Api
             GlobalConfiguration.Configuration.Formatters.Remove(GlobalConfiguration.Configuration.Formatters
                 .XmlFormatter);
         }
-    }
+
+		protected void Application_End() {
+			_diConfig.Dispose();
+		}
+	}
 }

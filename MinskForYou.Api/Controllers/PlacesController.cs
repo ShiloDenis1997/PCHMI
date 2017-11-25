@@ -10,15 +10,21 @@ using System.Threading.Tasks;
 using System.Web.Http;
 using System.Web.Http.Description;
 using ORM;
+using MinskForYou.Api.Interfaces.Services;
 
 namespace MinskForYou.Api.Controllers
 {
     public class PlacesController : ApiController
     {
         private ORM.MinskForYou db = new ORM.MinskForYou();
+		private readonly IPlaceService _placeManager;
 
-        // GET: api/Places
-        public IQueryable<Place> GetPlaces()
+		public PlacesController(IPlaceService placeManager) {
+			_placeManager = placeManager;
+		}
+
+		// GET: api/Places
+		public IQueryable<Place> GetPlaces()
         {
             return db.Places;
         }
@@ -27,7 +33,7 @@ namespace MinskForYou.Api.Controllers
         [ResponseType(typeof(Place))]
         public async Task<IHttpActionResult> GetPlace(int id)
         {
-            Place place = await db.Places.FindAsync(id);
+            Place place = _placeManager.GetById(id);
             if (place == null)
             {
                 return NotFound();
