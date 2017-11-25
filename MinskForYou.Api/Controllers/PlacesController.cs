@@ -1,7 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Data;
-using System.Data.Entity;
+﻿using System.Data.Entity;
 using System.Data.Entity.Infrastructure;
 using System.Linq;
 using System.Net;
@@ -12,11 +9,9 @@ using System.Web.Http.Description;
 using ORM;
 using MinskForYou.Api.Interfaces.Services;
 
-namespace MinskForYou.Api.Controllers
-{
-    public class PlacesController : ApiController
-    {
-        private ORM.MinskForYou db = new ORM.MinskForYou();
+namespace MinskForYou.Api.Controllers {
+	public class PlacesController : ApiController {
+		private ORM.MinskForYou db = new ORM.MinskForYou();
 		private readonly IPlaceService _placeManager;
 
 		public PlacesController(IPlaceService placeManager) {
@@ -24,102 +19,83 @@ namespace MinskForYou.Api.Controllers
 		}
 
 		// GET: api/Places
-		public IQueryable<Place> GetPlaces()
-        {
-            return db.Places;
-        }
+		public IQueryable<Place> GetPlaces() {
+			return db.Places;
+		}
 
-        // GET: api/Places/5
-        [ResponseType(typeof(Place))]
-        public async Task<IHttpActionResult> GetPlace(int id)
-        {
-            Place place = _placeManager.GetById(id);
-            if (place == null)
-            {
-                return NotFound();
-            }
+		// GET: api/Places/5
+		[ResponseType(typeof(Place))]
+		public async Task<IHttpActionResult> GetPlace(int id) {
+			Place place = _placeManager.GetById(id);
+			if (place == null) {
+				return NotFound();
+			}
 
-            return Ok(place);
-        }
+			return Ok(place);
+		}
 
-        // PUT: api/Places/5
-        [ResponseType(typeof(void))]
-        public async Task<IHttpActionResult> PutPlace(int id, Place place)
-        {
-            if (!ModelState.IsValid)
-            {
-                return BadRequest(ModelState);
-            }
+		// PUT: api/Places/5
+		[ResponseType(typeof(void))]
+		public async Task<IHttpActionResult> PutPlace(int id, Place place) {
+			if (!ModelState.IsValid) {
+				return BadRequest(ModelState);
+			}
 
-            if (id != place.ID)
-            {
-                return BadRequest();
-            }
+			if (id != place.ID) {
+				return BadRequest();
+			}
 
-            db.Entry(place).State = EntityState.Modified;
+			db.Entry(place).State = EntityState.Modified;
 
-            try
-            {
-                await db.SaveChangesAsync();
-            }
-            catch (DbUpdateConcurrencyException)
-            {
-                if (!PlaceExists(id))
-                {
-                    return NotFound();
-                }
-                else
-                {
-                    throw;
-                }
-            }
+			try {
+				await db.SaveChangesAsync();
+			} catch (DbUpdateConcurrencyException) {
+				if (!PlaceExists(id)) {
+					return NotFound();
+				} else {
+					throw;
+				}
+			}
 
-            return StatusCode(HttpStatusCode.NoContent);
-        }
+			return StatusCode(HttpStatusCode.NoContent);
+		}
 
-        // POST: api/Places
-        [ResponseType(typeof(Place))]
-        public async Task<IHttpActionResult> PostPlace(Place place)
-        {
-            if (!ModelState.IsValid)
-            {
-                return BadRequest(ModelState);
-            }
+		// POST: api/Places
+		[ResponseType(typeof(Place))]
+		public async Task<IHttpActionResult> PostPlace(Place place) {
+			if (!ModelState.IsValid) {
+				return BadRequest(ModelState);
+			}
 
-            db.Places.Add(place);
-            await db.SaveChangesAsync();
+			db.Places.Add(place);
+			await db.SaveChangesAsync();
 
-            return CreatedAtRoute("DefaultApi", new { id = place.ID }, place);
-        }
+			return CreatedAtRoute("DefaultApi", new { id = place.ID }, place);
+		}
 
-        // DELETE: api/Places/5
-        [ResponseType(typeof(Place))]
-        public async Task<IHttpActionResult> DeletePlace(int id)
-        {
-            Place place = await db.Places.FindAsync(id);
-            if (place == null)
-            {
-                return NotFound();
-            }
+		// DELETE: api/Places/5
+		[ResponseType(typeof(Place))]
+		public async Task<IHttpActionResult> DeletePlace(int id) {
+			Place place = await db.Places.FindAsync(id);
+			if (place == null) {
+				return NotFound();
+			}
 
-            db.Places.Remove(place);
-            await db.SaveChangesAsync();
+			db.Places.Remove(place);
+			await db.SaveChangesAsync();
 
-            return Ok(place);
-        }
+			return Ok(place);
+		}
 
-        protected override void Dispose(bool disposing)
-        {
-            if (disposing)
-            {
-                db.Dispose();
-            }
-            base.Dispose(disposing);
-        }
+		protected override void Dispose(bool disposing) {
+			if (disposing) {
+				db.Dispose();
+			}
+			base.Dispose(disposing);
+		}
 
-        private bool PlaceExists(int id)
-        {
-            return db.Places.Count(e => e.ID == id) > 0;
-        }
-    }
+		private bool PlaceExists(int id) {
+			return db.Places.Count(e => e.ID == id) > 0;
+		}
+	}
 }

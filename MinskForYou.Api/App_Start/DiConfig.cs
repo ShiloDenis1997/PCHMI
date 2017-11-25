@@ -12,7 +12,7 @@ namespace MinskForYou.Api.App_Start {
 
 		private IContainer BuildContainer() {
 			var builder = new ContainerBuilder();
-			//builder.RegisterApiControllers(Assembly.GetExecutingAssembly());
+
 			builder.RegisterApiControllers(Assembly.GetExecutingAssembly());
 
 			builder.RegisterModule(new LogicModule());

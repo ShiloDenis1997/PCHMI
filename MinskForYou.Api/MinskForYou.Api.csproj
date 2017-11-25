@@ -204,6 +204,7 @@
     <Compile Include="Interfaces\Services\IPlaceService.cs" />
     <Compile Include="LogicModule.cs" />
     <Compile Include="Models\PlaceType.cs" />
+    <Compile Include="Models\Sortings.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Services\PlaceService.cs" />
   </ItemGroup>

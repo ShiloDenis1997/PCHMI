@@ -1,9 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
+﻿
 
 namespace MinskForYou.Api.Models {
+
 	public enum PlaceType {
 		Other,
 		Museum,
@@ -15,4 +13,5 @@ namespace MinskForYou.Api.Models {
 		СafesAndRestaurants,
 		BarsAndPubs
 	}
+
 }
