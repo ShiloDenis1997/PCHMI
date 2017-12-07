@@ -28,7 +28,7 @@ namespace AndroidClient.Droid.Menu {
 			public MenuMasterViewModel() {
 				MenuItems = new ObservableCollection<MenuMenuItem>(new[]
 				{
-					new MenuMenuItem { Id = 0, Title = "Main" },
+					new MenuMenuItem { Id = 0, Title = "Main", TargetType = typeof(PlaceListViewPage)},
 					new MenuMenuItem { Id = 1, Title = "Search" },
 					new MenuMenuItem { Id = 2, Title = "Favorites" },
 					new MenuMenuItem { Id = 3, Title = "Login" },

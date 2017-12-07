@@ -22,6 +22,7 @@ EndProject
 Global
 	GlobalSection(SharedMSBuildProjectFiles) = preSolution
 		AndroidClient\AndroidClient\AndroidClient.projitems*{473bfe20-c220-4f58-a58d-ed887a570b50}*SharedItemsImports = 13
+		AndroidClient\AndroidClient\AndroidClient.projitems*{4e0c9dd5-4c37-4076-a7b7-b7e83da185b9}*SharedItemsImports = 4
 		AndroidClient\AndroidClient\AndroidClient.projitems*{7373894d-2600-4b84-9a69-f0345ad85a54}*SharedItemsImports = 4
 		AndroidClient\AndroidClient\AndroidClient.projitems*{be2a07cd-298e-4cd6-ba0d-6da2ca162819}*SharedItemsImports = 4
 	EndGlobalSection
