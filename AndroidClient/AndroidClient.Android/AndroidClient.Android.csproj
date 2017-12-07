@@ -134,6 +134,9 @@
     <Compile Include="Menu\PlaceListViewPage.xaml.cs">
       <DependentUpon>PlaceListViewPage.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Menu\PlacePage.xaml.cs">
+      <DependentUpon>PlacePage.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Models\Place.cs" />
     <Compile Include="Resources\Resource.Designer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -174,6 +177,19 @@
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Menu\PlaceListViewPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Icons\addfav3.png" />
+    <Content Include="Icons\fav24.png" />
+    <EmbeddedResource Include="Icons\main24.png" />
+    <Content Include="Icons\search24.png" />
+    <Content Include="Icons\set24.png" />
+    <Content Include="Icons\star-24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Menu\PlacePage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
   </ItemGroup>

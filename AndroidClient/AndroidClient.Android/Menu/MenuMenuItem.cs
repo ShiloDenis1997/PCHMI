@@ -12,6 +12,7 @@ namespace AndroidClient.Droid.Menu {
 		}
 		public int Id { get; set; }
 		public string Title { get; set; }
+		public object ImageSource { get; set; }
 
 		public Type TargetType { get; set; }
 	}

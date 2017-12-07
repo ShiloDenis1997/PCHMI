@@ -12,6 +12,7 @@ using Android.Widget;
 using System.Collections.ObjectModel;
 using Xamarin.Forms;
 using System.Windows.Input;
+using AndroidClient.Droid.Menu;
 
 namespace AndroidClient.Droid.ViewModels {
 
@@ -42,7 +43,7 @@ namespace AndroidClient.Droid.ViewModels {
 					PlaceViewModel tempPlace = value;
 					_selectedPlace = null;
 					OnPropertyChanged("SelectedPlace");
-					//Navigation.PushAsync(new FriendPage(tempPlace));
+					Navigation.PushAsync(new PlacePage(tempPlace));
 				}
 			}
 		}
