@@ -1,7 +1,7 @@
 ﻿body {
     padding-top: 50px;
     padding-bottom: 20px;
-    background-color: #FAEDFD;  
+    background-color: #f2f2f2;  
 }
 
 /* Set padding to keep content from hitting the edges */
@@ -19,11 +19,11 @@ textarea {
 }
 
 .navbar-inverse .navbar-toggle:hover {
-    background-color: #802ae2;
+    background-color: #333399;
 }
 
 .navbar-inverse .navbar-toggle:focus {
-    background-color: #802ae2;
+    background-color: #333399;
     outline-width: 0px;
 }
 
@@ -50,8 +50,8 @@ textarea {
 }
 
 .navbar-inverse {
-    background-color: #8a2be2;
-    border-color: #8a2ba2;
+    background-color: #333399;
+    border-color: #333399;
 }
 
 .panel-footer {
