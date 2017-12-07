@@ -1,12 +1,14 @@
 ﻿body {
     padding-top: 50px;
     padding-bottom: 20px;
+    background-color: #FAEDFD;  
 }
 
 /* Set padding to keep content from hitting the edges */
 .body-content {
     padding-left: 15px;
     padding-right: 15px;
+    margin-top: 30px;
 }
 
 /* Set width on the form input elements since they're 100% wide by default */
@@ -14,4 +16,50 @@ input,
 select,
 textarea {
     max-width: 280px;
+}
+
+.navbar-inverse .navbar-toggle:hover {
+    background-color: #802ae2;
+}
+
+.navbar-inverse .navbar-toggle:focus {
+    background-color: #802ae2;
+    outline-width: 0px;
+}
+
+.navbar-inverse .navbar-nav > li > a {
+    color: #ffffff;
+}
+
+.navbar-inverse .navbar-brand {
+    color: #ffffff;
+    font-size: 24px;
+}
+
+.navbar-inverse .navbar-nav > li > a:hover {
+    color: #f5deb3;
+}
+
+.navbar-inverse .navbar-nav > li > a:focus {
+    color: #d2b48c;
+}
+
+.navbar-inverse {
+    font-size: 20px;
+    color: #ffffff;
+}
+
+.navbar-inverse {
+    background-color: #8a2be2;
+    border-color: #8a2ba2;
+}
+
+.panel-footer {
+    position: relative;
+    height: 55px;
+}
+
+.btn-footer-details {
+    right: 20px;
+    position: absolute;
 }
