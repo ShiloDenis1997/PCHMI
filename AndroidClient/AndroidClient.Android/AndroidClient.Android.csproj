@@ -120,6 +120,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ImageResourceExtension.cs" />
     <Compile Include="MainActivity.cs" />
     <Compile Include="Menu\Menu.xaml.cs">
       <DependentUpon>Menu.xaml</DependentUpon>
@@ -181,17 +182,23 @@
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Icons\addfav3.png" />
-    <Content Include="Icons\fav24.png" />
-    <EmbeddedResource Include="Icons\main24.png" />
-    <Content Include="Icons\search24.png" />
-    <Content Include="Icons\set24.png" />
-    <Content Include="Icons\star-24.png" />
+    <Content Include="Resources\Drawable\addfav3.png" />
+    <Content Include="Resources\Drawable\fav24.png" />
+    <AndroidResource Include="Resources\Drawable\teatr.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </AndroidResource>
+    <EmbeddedResource Include="Resources\Drawable\main24.png" />
+    <Content Include="Resources\Drawable\search24.png" />
+    <Content Include="Resources\Drawable\set24.png" />
+    <Content Include="Resources\Drawable\star-24.png" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Menu\PlacePage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Icons\" />
   </ItemGroup>
   <Import Project="..\AndroidClient\AndroidClient.projitems" Label="Shared" Condition="Exists('..\AndroidClient\AndroidClient.projitems')" />
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />

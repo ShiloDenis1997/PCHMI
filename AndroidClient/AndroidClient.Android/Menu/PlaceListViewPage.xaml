@@ -1,6 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:AndroidClient.Droid"
              x:Class="AndroidClient.Droid.Menu.PlaceListViewPage">
     <ListView x:Name="MyListView"
             ItemsSource="{Binding Places}" 
@@ -30,10 +31,11 @@
                                 <ColumnDefinition Width="*"/>
                                 <ColumnDefinition Width="*"/>
                             </Grid.ColumnDefinitions>
-                            <Image Grid.Column="0"
-                                WidthRequest="200" HeightRequest="200"></Image>
-                            <StackLayout Grid.Column="1">
-                                <Label Text="{Binding Name}" FontSize="Medium" />
+                            <Image Grid.Column="0" Margin="10,10,0,10"
+                                Source="teatr.jpg"></Image>
+                            <StackLayout Grid.Column="1" Margin="10">
+                                <Label Text="{Binding Name}" FontSize="Large" Font="Bold"/>
+                                <Label Text="{Binding AverageMark}" FontSize="Small"/>
                                 <Label Text="{Binding Description}" FontSize="Small"/>
                             </StackLayout>
 

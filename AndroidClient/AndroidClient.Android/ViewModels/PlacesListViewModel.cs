@@ -26,12 +26,30 @@ namespace AndroidClient.Droid.ViewModels {
 
 		public PlacesListViewModel() {
 			Places = new ObservableCollection<PlaceViewModel>();
-			Places.Add(new PlaceViewModel() { Name = "aaa", Description = "aaaaaaaaaaaaaaaaaaaaaaa" });
-			Places.Add(new PlaceViewModel() { Name = "bbb", Description = "bbbbbbbbbbbbbbbbbbbbbbb" });
-			Places.Add(new PlaceViewModel() { Name = "ccc", Description = "ccccccccccccccccccccccc" });
-			Places.Add(new PlaceViewModel() { Name = "aaa", Description = "aaaaaaaaaaaaaaaaaaaaaaa" });
-			Places.Add(new PlaceViewModel() { Name = "bbb", Description = "bbbbbbbbbbbbbbbbbbbbbbb" });
-			Places.Add(new PlaceViewModel() { Name = "ccc", Description = "ccccccccccccccccccccccc" });
+			Places.Add(new PlaceViewModel() { Name = "National Opera and Ballet",
+				AverageMark = 4.5,
+				Description = "The National Academic Grand Opera and Ballet Theatre of the Republic of Belarus"
+			});
+			Places.Add(new PlaceViewModel() { Name = "National Opera and Ballet",
+				AverageMark = 5,
+				Description = "The National Academic Grand Opera and Ballet Theatre of the Republic of Belarus"
+			});
+			Places.Add(new PlaceViewModel() { Name = "National Opera and Ballet",
+				AverageMark = 4.8,
+				Description = "The National Academic Grand Opera and Ballet Theatre of the Republic of Belarus"
+			});
+			Places.Add(new PlaceViewModel() { Name = "National Opera and Ballet",
+				AverageMark = 4.5,
+				Description = "The National Academic Grand Opera and Ballet Theatre of the Republic of Belarus"
+			});
+			Places.Add(new PlaceViewModel() { Name = "National Opera and Ballet",
+				AverageMark = 4.5,
+				Description = "The National Academic Grand Opera and Ballet Theatre of the Republic of Belarus"
+			});
+			Places.Add(new PlaceViewModel() { Name = "National Opera and Ballet",
+				AverageMark = 4.5,
+				Description = "The National Academic Grand Opera and Ballet Theatre of the Republic of Belarus"
+			});
 			OnPropertyChanged("Places");
 			BackCommand = new Command(Back);
 		}
