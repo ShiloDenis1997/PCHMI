@@ -29,7 +29,7 @@ namespace AndroidClient.Droid.Menu {
 				MenuItems = new ObservableCollection<MenuMenuItem>(new[]
 				{
 					new MenuMenuItem { Id = 0, Title = "Main",
-						ImageSource = ImageSource.FromResource("Icons.main24.png"),
+						ImageSource = ImageSource.FromResource("search24.png"),
 						TargetType = typeof(PlaceListViewPage)},
 					new MenuMenuItem { Id = 1, Title = "Search" },
 					new MenuMenuItem { Id = 2, Title = "Favorites" },

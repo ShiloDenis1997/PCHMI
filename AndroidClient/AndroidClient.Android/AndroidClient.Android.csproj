@@ -182,15 +182,26 @@
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Resources\Drawable\addfav3.png" />
-    <Content Include="Resources\Drawable\fav24.png" />
+    <AndroidResource Include="Resources\Drawable\addfav3.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </AndroidResource>
+    <AndroidResource Include="Resources\Drawable\fav24.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </AndroidResource>
     <AndroidResource Include="Resources\Drawable\teatr.jpg">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </AndroidResource>
     <EmbeddedResource Include="Resources\Drawable\main24.png" />
-    <Content Include="Resources\Drawable\search24.png" />
+    <AndroidResource Include="Resources\Drawable\minsk1.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </AndroidResource>
+    <AndroidResource Include="Resources\Drawable\search24.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </AndroidResource>
     <Content Include="Resources\Drawable\set24.png" />
-    <Content Include="Resources\Drawable\star-24.png" />
+    <AndroidResource Include="Resources\Drawable\star24.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </AndroidResource>
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Menu\PlacePage.xaml">

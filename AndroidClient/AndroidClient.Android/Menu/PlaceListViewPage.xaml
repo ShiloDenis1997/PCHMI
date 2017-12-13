@@ -35,7 +35,10 @@
                                 Source="teatr.jpg"></Image>
                             <StackLayout Grid.Column="1" Margin="10">
                                 <Label Text="{Binding Name}" FontSize="Large" Font="Bold"/>
-                                <Label Text="{Binding AverageMark}" FontSize="Small"/>
+                                <StackLayout Orientation="Horizontal">
+                                    <Image Margin="0,0,5,0" Source="star24.png"/>
+                                    <Label Text="{Binding AverageMark}" FontSize="Small"/>
+                                </StackLayout>
                                 <Label Text="{Binding Description}" FontSize="Small"/>
                             </StackLayout>
 
