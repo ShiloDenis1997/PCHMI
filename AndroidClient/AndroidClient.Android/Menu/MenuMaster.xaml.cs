@@ -33,7 +33,8 @@ namespace AndroidClient.Droid.Menu {
 						TargetType = typeof(PlaceListViewPage)},
 					new MenuMenuItem { Id = 1, Title = "Search" },
 					new MenuMenuItem { Id = 2, Title = "Favorites" },
-					new MenuMenuItem { Id = 3, Title = "Login" },
+					new MenuMenuItem { Id = 3, Title = "Login",
+						TargetType = typeof(LoginPage)},
 				});
 			}
 

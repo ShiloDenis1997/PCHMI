@@ -15,16 +15,24 @@
                 <Label Grid.Column="0" Text="National Opera and Ballet" Margin="10" FontSize="Large" Font="Bold"
                     VerticalOptions="CenterAndExpand" 
                     HorizontalOptions="StartAndExpand" />
-                <Image Margin="0" Source="addfav3.png" HorizontalOptions="End"/>
+                <Image Grid.Column="1" Margin="0" Source="addfav3.png" HorizontalOptions="End"/>
             </Grid>
             <StackLayout Orientation="Horizontal" Margin="10,0,10,0">
-                <Image Margin="0,0,5,0" Source="star24.png"/>
-                <Label Text="{Binding AverageMark}" FontSize="Small"/>
+                <Image Margin="0,0,5,0" Source="star24.png" VerticalOptions="CenterAndExpand"/>
+                <Label Text="{Binding AverageMark}" FontSize="Small" VerticalOptions="CenterAndExpand"/>
             </StackLayout>
             <Label Text="{Binding Description}" FontSize="Small" Margin="10,5,10,10"/>
             <Label Grid.Column="0" Text="Reviews" Margin="10" FontSize="Large" Font="Bold"
-                    VerticalOptions="CenterAndExpand" 
+                    VerticalOptions="StartAndExpand" 
                     HorizontalOptions="StartAndExpand" />
+            <Grid HorizontalOptions="FillAndExpand"  VerticalOptions="Start">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"></ColumnDefinition>
+                    <ColumnDefinition Width="55"></ColumnDefinition>
+                </Grid.ColumnDefinitions>
+                <Entry Grid.Column="0"/>
+                <Button Grid.Column="1" Text="OK"/>
+            </Grid>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>
